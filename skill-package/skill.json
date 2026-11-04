@@ -1,0 +1,31 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-GB": {
+          "name": "MPD",
+          "summary": "Plays your MPD stream",
+          "description": "Plays the mp3 stream from your own MPD server.",
+          "examplePhrases": ["Alexa, ask M P D to play"],
+          "keywords": []
+        },
+        "en-US": {
+          "name": "MPD",
+          "summary": "Plays your MPD stream",
+          "description": "Plays the mp3 stream from your own MPD server.",
+          "examplePhrases": ["Alexa, ask M P D to play"],
+          "keywords": []
+        }
+      },
+      "isAvailableWorldwide": true,
+      "category": "MUSIC_AND_AUDIO",
+      "testingInstructions": "Personal skill, development stage only."
+    },
+    "apis": {
+      "custom": {
+        "interfaces": [{ "type": "AUDIO_PLAYER" }]
+      }
+    },
+    "manifestVersion": "1.0"
+  }
+}
