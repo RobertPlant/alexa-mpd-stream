@@ -52,15 +52,18 @@ You need an Amazon developer account (https://developer.amazon.com) on the same 
 your Echos.
 
 1. Fork this repo and set `STREAM_URL` at the top of `lambda/index.js` to your stream.
-2. In the Alexa developer console, create a skill: custom model, Alexa-hosted (Node.js), and
-   import it from your fork's git URL. Pick the locale your Echos use (en-GB or en-US).
+2. In the Alexa developer console, create a skill with the locale your Echos use (en-GB or en-US),
+   a custom model and Alexa-hosted (Node.js). On the template page pick "Import skill" and give it
+   your fork's `.git` URL.
 3. Build the model, then on the Test tab set testing to "Development".
 4. "Alexa, ask M P D to play".
 
 If you dont want to fork, import this repo as it is and change `STREAM_URL` in the console's Code
 tab, then Deploy.
 
-The ASK CLI works too if you'd rather deploy from a terminal, `ask deploy` from a clone.
+Later code changes can go in through the console's Code tab or by pushing `lambda/` to the skill's
+own git repo. Don't push `skill-package/skill.json` there, it has no endpoint (the hosted Lambda's
+ARN is per skill) so the skill loses its Lambda and can't be enabled for testing.
 
 ## Things that caught me out
 
